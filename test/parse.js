@@ -5,13 +5,11 @@ import {parse} from '../src/index.js'
 describe('parse', function () {
   context('given valid source string', function () {
     context('$message.payload#/user/id', function () {
-      specify.only('should parse and translate', function () {
+      specify('should parse and translate', function () {
         const parseResult = parse('$message.payload#/user/id');
 
         const parts = [];
         parseResult.ast.translate(parts);
-
-        console.log(parseResult.ast.toXml());
 
         assert.isTrue(parseResult.result.success);
         assert.deepEqual(parts, [
