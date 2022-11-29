@@ -1,0 +1,9 @@
+; AsyncAPI runtime expression ABNF syntax - https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#runtimeExpression
+expression         = ( "$message." source )
+source             = ( header-reference / payload-reference )
+header-reference   = "header"  ["#" fragment]
+payload-reference  = "payload" ["#" fragment]
+fragment           = *( "/" reference-token )
+reference-token    = *( unescaped / escaped )
+unescaped          = %x00-2E / %x30-7D / %x7F-10FFFF ; %x2F ('/') and %x7E ('~') are excluded from 'unescaped'
+escaped            = "~" ( "0" / "1" ) ; representing '~' and '/', respectively

@@ -1,0 +1,55 @@
+{
+  "name": "asyncapi-runtime-expression",
+  "version": "1.0.0",
+  "description": "AsyncAPI Runtime expressions parser and validator.",
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json",
+    "./runtime-expression.bnf": "./src/runtime-expression.bnf"
+  },
+  "scripts": {
+    "grammar:compile": "./node_modules/apg-js/bin/apg.sh --in=./src/runtime-expression.bnf --out=./src/runtime-expression.js && cd ./src && mv runtime-expression.js runtime-expression.cjs",
+    "test": "mocha",
+    "prepare": "husky install"
+  },
+  "engines": {
+    "node": ">=14.16"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/char0n/asyncapi-runtime-expression.git"
+  },
+  "keywords": [
+    "asyncapi",
+    "runtime",
+    "expression",
+    "parser",
+    "validator"
+  ],
+  "author": "Vladimír Gorej <vladimir.gorej@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/char0n/asyncapi-runtime-expression/issues"
+  },
+  "homepage": "https://github.com/char0n/asyncapi-runtime-expression#readme",
+  "files": [
+    "src/",
+    "LICENSE",
+    "NOTICE",
+    "package.json",
+    "README.md",
+    "sbom.spdx.yaml",
+    "SECURITY.md"
+  ],
+  "dependencies": {
+    "apg-js": "^4.1.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "=17.1.2",
+    "@commitlint/config-conventional": "=17.1.0",
+    "chai": "=4.3.6",
+    "husky": "=8.0.1",
+    "mocha": "=10.1.0"
+  }
+}
