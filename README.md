@@ -1,6 +1,6 @@
 # asyncapi-runtime-expression
 
-[Runtime Expressions](https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#runtimeExpression) A runtime expression allows values to be defined based on information that will be available within the message.
+[Runtime Expressions](https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#runtimeExpression) allow values to be defined based on information that will be available within the message.
 This mechanism is used by [Correlation ID Object](https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#correlationIdObject) of [AsyncAPI specification](https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md).
 
 `asyncapi-runtime-expression` is a **parser** and **validator** for AsyncAPI Runtime Expressions. It supports
