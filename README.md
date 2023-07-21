@@ -12,6 +12,7 @@ Runtime Expressions defined in following AsyncAPI specification versions:
 - [AsyncAPI 2.3.0](https://www.asyncapi.com/docs/reference/specification/v2.3.0#runtimeExpression)
 - [AsyncAPI 2.4.0](https://www.asyncapi.com/docs/reference/specification/v2.4.0#runtimeExpression)
 - [AsyncAPI 2.5.0](https://www.asyncapi.com/docs/reference/specification/v2.5.0#runtimeExpression)
+- [AsyncAPI 2.6.0](https://www.asyncapi.com/docs/reference/specification/v2.6.0#runtimeExpression)
 
 ## Table of Contents
 
